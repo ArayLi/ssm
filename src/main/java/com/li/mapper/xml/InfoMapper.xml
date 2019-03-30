@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.xu.mapper.InfoMapper" >
-    <resultMap id="BaseResultMap" type="com.xu.entity.Info" >
+<mapper namespace="com.li.mapper.InfoMapper" >
+    <resultMap id="BaseResultMap" type="com.li.entity.Info" >
         <id column="id" property="id" jdbcType="INTEGER" />
         <result column="name" property="name" jdbcType="VARCHAR" />
         <result column="uid" property="uid" jdbcType="INTEGER" />
@@ -19,13 +19,13 @@
         delete from info
         where id = #{id,jdbcType=INTEGER}
     </delete>
-    <insert id="insert" parameterType="com.xu.entity.Info" >
+    <insert id="insert" parameterType="com.li.entity.Info" >
         insert into info (id, name, uid
         )
         values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{uid,jdbcType=INTEGER}
         )
     </insert>
-    <insert id="insertSelective" parameterType="com.xu.entity.Info" >
+    <insert id="insertSelective" parameterType="com.li.entity.Info" >
         insert into info
         <trim prefix="(" suffix=")" suffixOverrides="," >
             <if test="id != null" >
@@ -50,7 +50,7 @@
             </if>
         </trim>
     </insert>
-    <update id="updateByPrimaryKeySelective" parameterType="com.xu.entity.Info" >
+    <update id="updateByPrimaryKeySelective" parameterType="com.li.entity.Info" >
         update info
         <set >
             <if test="name != null" >
@@ -62,7 +62,7 @@
         </set>
         where id = #{id,jdbcType=INTEGER}
     </update>
-    <update id="updateByPrimaryKey" parameterType="com.xu.entity.Info" >
+    <update id="updateByPrimaryKey" parameterType="com.li.entity.Info" >
         update info
         set name = #{name,jdbcType=VARCHAR},
         uid = #{uid,jdbcType=INTEGER}

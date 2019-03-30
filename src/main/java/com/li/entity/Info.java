@@ -1,4 +1,4 @@
-package com.xu.entity;
+package com.li.entity;
 
 public class Info {
     private Integer id;

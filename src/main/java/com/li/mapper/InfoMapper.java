@@ -1,6 +1,6 @@
-package com.xu.mapper;
+package com.li.mapper;
 
-import com.xu.entity.Info;
+import com.li.entity.Info;
 
 public interface InfoMapper {
     int deleteByPrimaryKey(Integer id);
